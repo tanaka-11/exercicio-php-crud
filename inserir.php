@@ -1,3 +1,20 @@
+<?php
+require_once "./src/funcoes-alunos.php";
+$listaDeAlunos = lerAlunos($conexao);
+
+if(isset($_POST['inserir'])){
+	$nomeAluno = filter_input(INPUT_POST, "nomeAluno", FILTER_SANITIZE_SPECIAL_CHARS);
+
+	$primeiraNota = filter_input(INPUT_POST, "primeiraNota",FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+
+	$segundaNota = filter_input(INPUT_POST, "segundaNota",FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+
+	inserirAluno($nomeAluno, $primeiraNota, $segundaNota);
+
+	header("location:visualizar.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -23,7 +40,7 @@
 	    <p><label for="segunda">Segunda nota:</label>
 	    <input type="number" name="segundaNota" id="segundaNota" step="0.01" min="0.00" max="10.00" required></p>
 	    
-      <button>Cadastrar aluno</button>
+      <button type="submit" name="inserir">Cadastrar aluno</button>
 	</form>
 
     <hr>

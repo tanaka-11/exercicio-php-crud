@@ -16,3 +16,20 @@ function lerAlunos (PDO $conexao):array {
     }
     return $resultado;
 }
+
+function inserirAluno(PDO $conexao, string $nomeAluno, float $primeiraNota, float $segundaNota):void {
+    $sql = "INSERT INTO alunos(nomeAluno, primeiraNota, segundaNota) VALUES (:nomeAluno, :primeiraNota, :segundaNota)";
+    try {
+        $consulta = $conexao -> prepare($sql);
+
+        $consulta ->bindValue(":nomeAluno", $nomeAluno, PDO::PARAM_STR);
+
+        $consulta ->bindValue(":primeiraNota", $primeiraNota, PDO::PARAM_STR);
+
+        $consulta ->bindValue(":segundaNota", $segundaNota, PDO::PARAM_STR);
+
+
+    } catch (Exception $erro) {
+        die("Erro ao cadastrar aluno: ".$erro->getMessage());
+    }
+}
