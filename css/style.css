@@ -57,12 +57,12 @@ footer p a:hover {
     width: 75%;
     height: 60vh;
     border-radius: 12px;
-    background-color: var(--color-container-cadastro);
+    background-color:#0a3599;
     box-shadow: #000 1px 1px 10px;
 }
 
 .containerIndex h1{ 
-    color: var(--color-h1-cadastro);
+    color: #fff;
     font-size: 2.3rem;
     margin-top: 20px;
 }
@@ -70,32 +70,42 @@ footer p a:hover {
 .containerIndex h2 {
     font-size: 1.8rem;
     margin-top: 20px;
-    color: ;
+    color:#fffb00;
 }
 
 ul {
     list-style: none;
     padding: 10px;
+    
 }
 
 ul li {
     padding: 20px;
+    margin: px;
     font-size: 2rem;
-    color: #ff0000;
+}
+
+.button-visualizar {
+    margin: 30px;
+}
+
+.button-visualizar a{
+    color: #ffffff;
+}
+
+.button-visualizar a:hover{
+    background-color: #ccdf26; 
+    color: #000000;
+    border-radius: 8px;
+    font-size: 2.1rem;
+    text-transform: uppercase;
 }
 
 .containerIndex ul li a{
     text-decoration: none;
     transition: font-size 0.3s ease;
-
-}
-
-.containerIndex ul li a:hover {
-    background-color: var(--color-primary);
-    border-radius: 8px;
-    font-size: 2.2rem;
-    color: #ffffff;
-    transition: font-size 0.3s ease;
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 /* Página Visualizar */

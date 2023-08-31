@@ -20,17 +20,19 @@
 
     <br>
     
-    <ul>
-        <li>
-            <a href="visualizar.php">Visualizar Alunos</a>
-        </li>
+    <div class="button-visualizar">
+        <ul>
+            <li>
+                <a href="visualizar.php">Visualizar Alunos</a>
+            </li>
 
-        <br>
+            <br>
 
-        <li>
-            <a href="inserir.php">Inserir novo aluno</a>
-        </li>
-    </ul>
+            <li>
+                <a href="inserir.php">Inserir novo aluno</a>
+            </li>
+        </ul>
+    </div>
 </div>
 
 </body>
