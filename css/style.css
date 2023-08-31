@@ -5,9 +5,9 @@
 }
 
 :root {
-    --color-h1-cadastro: #3549fa;
+    --color-h1-cadastro: #09136e;
     --color-container-cadastro: #626e8b ;
-    --color-p-cadastro: #4228a0;;
+    --color-p-cadastro: #6845e7;;
     --color-background-cadastro: #c5c9d4;
 }
 
@@ -36,11 +36,17 @@ footer {
 
 footer p a {
     text-decoration: none;
-    color: var(--color-secondary);
+    color: #0f0e75;
     text-transform: uppercase;
 }
 
-footer p a:hover 
+footer p a:hover {
+    color: #fff;
+    background-color: #211fb3;
+    transition: font-size 0.2s ease;
+    font-size: 1.6rem;
+    border-radius: 4px;
+} 
 
 
 /* Página Index */
@@ -129,8 +135,9 @@ form {
 
 form, input:not([type="text"]), input[type="text"] {
     padding: 1.10rem;
-    width: 80%;
+    width: 90%;
     margin: 5px auto;
+    padding-left: 5%;
     border-radius: 12px;
     text-transform: capitalize;
 }
@@ -157,7 +164,7 @@ input[type="text"]:focus {
 }
 
 label {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: #ffffff;
     text-transform: capitalize;
     text-shadow: #000 1px 1px 3px;
@@ -178,7 +185,7 @@ label {
 }
 
 button {
-    margin: auto;
+    margin: 20px auto;
     width: 50%;
     display: flex;
     align-items: center;
@@ -193,7 +200,8 @@ button:hover, button:focus {
 
 .containerCadastro {
     background-color: var(--color-background-cadastro);
-    width: 100%;
+    width: 82%;
+    margin: auto;
     height: 100%;
     background-color: #cfd1d8;
 }
