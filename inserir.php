@@ -15,37 +15,82 @@ if(isset($_POST['inserir'])){
 }
 ?>
 
+
+
+
+
+
+
+
+
+
+
+
+<!-- Começo HTML -->
 <!DOCTYPE html>
+
 <html lang="pt-br">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cadastrar um novo aluno - Exercício CRUD com PHP e MySQL</title>
+
+<title>Sistema de Cadastro</title>
+
 <link href="css/style.css" rel="stylesheet">
+
 </head>
-<body>
-<div class="cadastro-aluno">
-	<h1>Cadastrar um novo aluno </h1>
-    <hr>
+
+<div class="containerCadastro">
+	<body>
+
+	<header>	
+		<h1 class="text-center">Sistema de Cadastro</h1>
     		
-    <p>Utilize o formulário abaixo para cadastrar um novo aluno.</p>
+    	<p class="text-center">Utilize o formulário abaixo para cadastrar um novo aluno.</p>	
+	</header>
 
-	<form action="#" method="post">
-	    <p><label for="nome">Nome:</label>
-	    <input type="text" name="nomeAluno" id="nome" required></p>
+	<div class="centralizar">
+	<!-- Começo formulário -->
+		<form class="" action="#" method="post">
+			<p>
+				<label for="nome">Nome</label>
+			
+				<br>
+			
+				<input type="text" name="nomeAluno" id="nome" required>
+			</p>
+
         
-      <p><label for="primeira">Primeira nota:</label>
-	    <input type="number" name="primeiraNota" id="primeiraNota" step="0.01" min="0.00" max="10.00" required></p>
-	    
-	    <p><label for="segunda">Segunda nota:</label>
-	    <input type="number" name="segundaNota" id="segundaNota" step="0.01" min="0.00" max="10.00" required></p>
-	    
-      <button type="submit" name="inserir">Cadastrar aluno</button>
-	</form>
+			<p>
+				<label for="primeira">Primeira nota</label>
+		
+				<br>
 
-    <hr>
-    <p><a href="index.php">Voltar ao início</a></p>
+				<input type="number" name="primeiraNota" id="primeiraNota" step="0.01" min="0.00" max="10.00" required>
+			</p>
+		
+	    
+			<p>
+				<label for="segunda">Segunda nota</label>
+			
+				<br>
+			
+				<input type="number" name="segundaNota" id="segundaNota" step="0.01" min="0.00" max="10.00" required>
+			</p>
+		
+	    
+			<button class="botaoInserir" type="submit" name="inserir">Cadastrar aluno</button>
+		
+		</form>
+	</div>
+
+	<footer>
+    	<p class="text-center">
+			<a href="index.php">Voltar</a>
+		</p>
+	</footer>
+		
+	</body>
 </div>
-
-</body>
 </html>

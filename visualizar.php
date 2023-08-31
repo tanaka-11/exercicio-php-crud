@@ -9,14 +9,14 @@ $listaDeAlunos = lerAlunos($conexao);
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Lista de alunos - Exercício CRUD com PHP e MySQL</title>
+<title>Lista de alunos - Visualização</title>
 
 <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="container">
+<div class="containerVisualizar text-center">
     <h1>Lista de alunos</h1>
     <hr>
     <p><a href="inserir.php">Inserir novo aluno</a></p>
@@ -53,9 +53,9 @@ $listaDeAlunos = lerAlunos($conexao);
     </p>
     </article>  
 <?php } ?>
-    </div>
 
     <p><a href="index.php">Voltar ao início</a></p>
+    </div>
 
 
 </body>
