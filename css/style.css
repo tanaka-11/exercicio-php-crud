@@ -8,7 +8,7 @@
     --color-h1-cadastro: #09136e;
     --color-container-cadastro: #626e8b ;
     --color-p-cadastro: #6845e7;;
-    --color-background-cadastro: #c5c9d4;
+    --color-background-cadastro: #b9c3dd;
 }
 
 .centralizar {
@@ -27,7 +27,7 @@ html { font-size: 16px;}
 
 body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #cfd1d8;
+    background-color: #b4b8c4;
 }
 
 footer {
@@ -54,20 +54,23 @@ footer p a:hover {
     padding: 20px;
     margin: 120px auto;
     max-width: 1200px;
-    width: 80%;
+    width: 75%;
+    height: 60vh;
     border-radius: 12px;
-    background-color: #0f0e75;
+    background-color: var(--color-container-cadastro);
     box-shadow: #000 1px 1px 10px;
 }
 
 .containerIndex h1{ 
-    color: #fff;
+    color: var(--color-h1-cadastro);
     font-size: 2.3rem;
+    margin-top: 20px;
 }
 
 .containerIndex h2 {
     font-size: 1.8rem;
-    margin: 15px 0px;
+    margin-top: 20px;
+    color: ;
 }
 
 ul {
@@ -78,7 +81,7 @@ ul {
 ul li {
     padding: 20px;
     font-size: 2rem;
-    color: var(--color-secondary);
+    color: #ff0000;
 }
 
 .containerIndex ul li a{
@@ -92,6 +95,7 @@ ul li {
     border-radius: 8px;
     font-size: 2.2rem;
     color: #ffffff;
+    transition: font-size 0.3s ease;
 }
 
 /* Página Visualizar */
@@ -203,11 +207,9 @@ button:hover, button:focus {
 }
 
 .containerCadastro {
-    background-color: var(--color-background-cadastro);
     width: 82%;
-    margin: 20px auto;
+    margin: 30px auto;
     height: 100%;
-    background-color: #cfd1d8;
 }
 
 .containerCadastro h1 {
