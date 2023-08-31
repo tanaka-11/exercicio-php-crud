@@ -54,17 +54,21 @@ if(isset($_POST['inserir'])){
 	<!-- Começo formulário -->
 		<form class="" action="#" method="post">
 			<p>
+				<b>
 				<label for="nome">Nome</label>
-			
+				</b>
+
 				<br>
 			
 				<input type="text" name="nomeAluno" id="nome" required>
 			</p>
 
         
-			<p>
+			<p> 
+				<b>
 				<label for="primeira">Primeira nota</label>
-		
+				</b>
+
 				<br>
 
 				<input type="number" name="primeiraNota" id="primeiraNota" step="0.01" min="0.00" max="10.00" required>
@@ -72,14 +76,16 @@ if(isset($_POST['inserir'])){
 		
 	    
 			<p>
+				<b>
 				<label for="segunda">Segunda nota</label>
-			
+				</b>
+				
 				<br>
 			
 				<input type="number" name="segundaNota" id="segundaNota" step="0.01" min="0.00" max="10.00" required>
 			</p>
 		
-	    
+	    	
 			<button class="botaoInserir" type="submit" name="inserir">Cadastrar aluno</button>
 		
 		</form>
@@ -90,7 +96,7 @@ if(isset($_POST['inserir'])){
 			<a href="index.php">Voltar</a>
 		</p>
 	</footer>
-		
+
 	</body>
 </div>
 </html>
