@@ -35,16 +35,18 @@ footer {
 }
 
 footer p a {
+    font-weight: 600;
+    font-size: 1.6rem;
     text-decoration: none;
     color: #0f0e75;
     text-transform: uppercase;
 }
 
-footer p a:hover {
+footer p a:hover, footer p a:focus {
     color: #fff;
     background-color: #211fb3;
     transition: font-size 0.2s ease;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     border-radius: 4px;
 } 
 
@@ -93,7 +95,7 @@ ul li {
     color: #ffffff;
 }
 
-.button-visualizar a:hover{
+.button-visualizar a:hover, .button-visualizar a:focus{
     background-color: #ccdf26; 
     color: #000000;
     border-radius: 8px;
@@ -109,8 +111,10 @@ ul li {
 }
 
 /* Página Visualizar */
+
 .containerVisualizar h1 {
     font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .containerVisualizar p a{
@@ -124,19 +128,44 @@ ul li {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 16px;
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 
 .aluno {
-    background-color: var(--color-secondary);
+    background-color: #0a3599;
     padding: 1.2rem;
-    width: 600px;
+    width: 450px;
     box-shadow: #000 1px 1px 4px;
     border-radius: 8px;
 }
 
+.aluno b{
+    color: #ffff00;/
+}
 
+.aluno p {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.aluno p a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: font-size 0.3s ease;
+}
+
+.editarAluno:hover {
+    color: #0089fa;
+    font-size: 2.3rem;
+}
+
+.excluirAluno:hover {
+    color: #9c1f1f;
+    font-size: 2.3rem;
+}
 
 /* Página Inserir */
 form {
