@@ -145,8 +145,10 @@ input:not([type="text"]),input[type="text"]{
 }
 
 input:not([type="text"]):hover,
-input[type="text"]:hover {
-    
+input[type="text"]:hover,
+input:not([type="text"]):focus,
+input[type="text"]:focus {
+
     font-size: 1.5rem;
     text-transform: uppercase;
     transition: font-size 0.3s ease;
