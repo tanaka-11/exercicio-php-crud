@@ -15,13 +15,13 @@
 
 	<form action="#" method="post">
 	    <p><label for="nome">Nome:</label>
-	    <input type="text" id="nome" required></p>
+	    <input type="text" name="nome" id="nome" required></p>
         
       <p><label for="primeira">Primeira nota:</label>
-	    <input type="number" id="primeira" step="0.01" min="0.00" max="10.00" required></p>
+	    <input type="number" name="primeiraNota" id="primeiraNota" step="0.01" min="0.00" max="10.00" required></p>
 	    
 	    <p><label for="segunda">Segunda nota:</label>
-	    <input type="number" id="segunda" step="0.01" min="0.00" max="10.00" required></p>
+	    <input type="number" name="segundaNota" id="segundaNota" step="0.01" min="0.00" max="10.00" required></p>
 	    
       <button>Cadastrar aluno</button>
 	</form>
