@@ -7,7 +7,7 @@
 :root {
     --color-primary: #294175 ;
     --color-secondary: #4b75cf;;
-    --color-background: #414761;
+    --color-background: #aeafb1;
 }
 
 html { font-size: 16px;}
@@ -30,6 +30,7 @@ body {
     width: 80%;
     border-radius: 12px;
     background-color: #a5aec4;
+    box-shadow: #000 1px 1px 10px;
 }
 
 .containerIndex h1{ 

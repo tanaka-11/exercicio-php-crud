@@ -28,7 +28,7 @@ function inserirAluno(PDO $conexao, string $nomeAluno, float $primeiraNota, floa
 
         $consulta ->bindValue(":segundaNota", $segundaNota, PDO::PARAM_STR);
 
-
+        $consulta -> execute();
     } catch (Exception $erro) {
         die("Erro ao cadastrar aluno: ".$erro->getMessage());
     }

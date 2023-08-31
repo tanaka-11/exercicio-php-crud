@@ -9,7 +9,7 @@ if(isset($_POST['inserir'])){
 
 	$segundaNota = filter_input(INPUT_POST, "segundaNota",FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 
-	inserirAluno($nomeAluno, $primeiraNota, $segundaNota);
+	inserirAluno($conexao, $nomeAluno, $primeiraNota, $segundaNota);
 
 	header("location:visualizar.php");
 }
@@ -32,7 +32,7 @@ if(isset($_POST['inserir'])){
 
 	<form action="#" method="post">
 	    <p><label for="nome">Nome:</label>
-	    <input type="text" name="nome" id="nome" required></p>
+	    <input type="text" name="nomeAluno" id="nome" required></p>
         
       <p><label for="primeira">Primeira nota:</label>
 	    <input type="number" name="primeiraNota" id="primeiraNota" step="0.01" min="0.00" max="10.00" required></p>
