@@ -7,7 +7,7 @@
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
+<div class="cadastro-aluno">
 	<h1>Cadastrar um novo aluno </h1>
     <hr>
     		
