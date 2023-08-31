@@ -176,7 +176,7 @@ label {
     border: none;
     padding: 10px;
     font-size: 1.2rem;
-    background-color: #2b961d;
+    background-color: #2d8522;
     color: #ffffff;
     font-weight: bold;
     border-radius: 8px;
@@ -186,7 +186,8 @@ label {
 
 button {
     margin: 20px auto;
-    width: 50%;
+    width: 80%;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,14 +195,17 @@ button {
 
 button:hover, button:focus {
     cursor: pointer;
-    background-color:#255fe6;
+    background-color:#0a3599;
     color: white;
+    transition: font-size 0.2s ease;
+    font-size: 1.3rem;
+    font-weight: 800
 }
 
 .containerCadastro {
     background-color: var(--color-background-cadastro);
     width: 82%;
-    margin: auto;
+    margin: 20px auto;
     height: 100%;
     background-color: #cfd1d8;
 }
@@ -217,5 +221,5 @@ button:hover, button:focus {
     font-size: 1.4rem;
     color: var(--color-p-cadastro);
     font-weight: 800;
-    margin: 5px;
+    margin: 10px;
 }

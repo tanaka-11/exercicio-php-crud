@@ -47,7 +47,7 @@ if(isset($_POST['inserir'])){
 	<header>	
 		<h1 class="text-center">Sistema de Cadastro</h1>
     		
-    	<p class="text-center">Utilize o formulário abaixo para cadastrar um novo aluno.</p>	
+    	<p class="text-center">Utilize o formulário abaixo para cadastrar as nota de um aluno.</p>	
 	</header>
 
 	<div class="centralizar">
@@ -79,14 +79,14 @@ if(isset($_POST['inserir'])){
 				<b>
 				<label for="segunda">Segunda nota</label>
 				</b>
-				
+
 				<br>
 			
 				<input type="number" name="segundaNota" id="segundaNota" step="0.01" min="0.00" max="10.00" required>
 			</p>
 		
 	    	
-			<button class="botaoInserir" type="submit" name="inserir">Cadastrar aluno</button>
+			<button class="botaoInserir" type="submit" name="inserir">Cadastrar notas</button>
 		
 		</form>
 	</div>
