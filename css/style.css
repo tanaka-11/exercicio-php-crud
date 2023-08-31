@@ -27,7 +27,7 @@ html { font-size: 16px;}
 
 body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #c5c9d4;
+    background-color: #cfd1d8;
 }
 
 footer {
@@ -39,6 +39,8 @@ footer p a {
     color: var(--color-secondary);
     text-transform: uppercase;
 }
+
+footer p a:hover 
 
 
 /* Página Index */
@@ -130,6 +132,7 @@ form, input:not([type="text"]), input[type="text"] {
     width: 80%;
     margin: 5px auto;
     border-radius: 12px;
+    text-transform: capitalize;
 }
 
 
@@ -142,9 +145,7 @@ input:not([type="text"]),input[type="text"]{
 }
 
 input:not([type="text"]):hover,
-input[type="text"]:hover,
-input:not([type="text"]):focus,
-input[type="text"]:focus {
+input[type="text"]:hover {
     
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -192,6 +193,7 @@ button:hover, button:focus {
     background-color: var(--color-background-cadastro);
     width: 100%;
     height: 100%;
+    background-color: #cfd1d8;
 }
 
 .containerCadastro h1 {
