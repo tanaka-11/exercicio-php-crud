@@ -41,3 +41,22 @@ function inserirAluno(PDO $conexao, string $nomeAluno, float $primeiraNota, floa
         die("Erro ao cadastrar aluno: ".$erro->getMessage());
     }
 }
+
+
+
+function lerUmAluno(PDO $conexao, int $id):array {
+    $sql = "SELECT * FROM alunos where id = :id";
+    try {
+        $consulta = $conexao -> prepare($sql);
+
+        $consulta -> bindValue(":id", $id, PDO::PARAM_INT);
+
+        $consulta -> execute();
+
+        $resultado = $consulta -> fetch(PDO::FETCH_ASSOC);
+
+    } catch (Exception $erro) {
+        die("Erro ao carregar dados do aluno. Tente Novamente".$erro->getMessage());
+    }
+    return $resultado;
+}
