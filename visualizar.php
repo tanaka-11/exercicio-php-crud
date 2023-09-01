@@ -58,7 +58,7 @@ $listaDeAlunos = lerAlunos($conexao);
 
         <a class="editarAluno" href="atualizar.php?id=<?=$aluno['id']?>"> Editar </a> |
 
-        <a class="excluirAluno?id=<?=$aluno['id']?>" href="deletar.php"> Excluir</a>
+        <a class="excluir excluirAluno" href="deletar.php?id=<?=$aluno['id']?>"> Excluir</a>
 
     </section>
 
@@ -72,6 +72,6 @@ $listaDeAlunos = lerAlunos($conexao);
         </p>
     </footer>    
 
-
+    <script src="./js/confirma-exclusao.js"></script>
 </body>
 </html>

@@ -82,7 +82,6 @@ if(isset($_POST['atualizar-dados'])) {
             <a href="visualizar.php">Voltar à lista de alunos</a>
         </p>
     </footer>
-
-
+    
 </body>
 </html>

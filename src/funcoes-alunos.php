@@ -64,6 +64,8 @@ function lerUmAluno(PDO $conexao, int $id):array {
     return $resultado;
 }
 
+
+
 function atualizarAluno(PDO $conexao, int $id ,string $nomeAluno, float $primeiraNota, float $segundaNota):void {
     $sql = "UPDATE alunos SET
     nomeAluno = :nomeAluno,
@@ -86,5 +88,19 @@ function atualizarAluno(PDO $conexao, int $id ,string $nomeAluno, float $primeir
 
     } catch (Exception $erro) {
         die("Erro ao atualizar dados do aluno. Tente Novamente".$erro->getMessage());
+    }
+}
+
+function deletarAluno(PDO $conexao, int $id):void {
+    $sql = "DELETE FROM alunos WHERE id = :id";
+    try {
+        $consulta = $conexao -> prepare($sql);
+
+        $consulta -> bindValue(":id", $id, PDO::PARAM_INT);
+
+        $consulta -> execute();
+
+    } catch (Exception $erro) {
+        die("Erro ao deletar dados do aluno. Tente Novamente".$erro->getMessage());
     }
 }
