@@ -1,6 +1,6 @@
 <?php
-require_once "./src/funcoes-utilitarias.php";
 require_once "./src/funcoes-alunos.php";
+
 $listaDeAlunos = lerAlunos($conexao);
 ?>
 
@@ -9,8 +9,8 @@ $listaDeAlunos = lerAlunos($conexao);
 <html lang="pt-br">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Lista de Alunos - Visualização</title>
 
@@ -45,7 +45,7 @@ $listaDeAlunos = lerAlunos($conexao);
     </p>
 
     <p>
-        <b>Média : </b><?=number_format($aluno['Média'], 2, ".", ".")?>
+        <b>Média : </b><?=number_format($aluno['media'], 2)?>
     </p>
 
     <p>
@@ -55,8 +55,11 @@ $listaDeAlunos = lerAlunos($conexao);
     <br>
 
     <section class="edicaoAluno">
-        <a class="editarAluno" href="">Editar</a> |
-        <a class="excluirAluno" href="">Excluir</a>
+
+        <a class="editarAluno" href="atualizar.php?id=<?=$aluno['id']?>"> Editar </a> |
+
+        <a class="excluirAluno?id=<?=$aluno['id']?>" href="deletar.php"> Excluir</a>
+
     </section>
 
     </article>  

@@ -2,10 +2,11 @@
 require_once "conecta.php";
 
 function lerAlunos (PDO $conexao):array {
-    $sql = "SELECT nomeAluno,
+    $sql = "SELECT id,
+    nomeAluno,
     primeiraNota,
     segundaNota,
-    (primeiraNota + segundaNota) / 2 as Média
+    (primeiraNota + segundaNota) / 2 as media
     FROM alunos 
     ORDER BY nomeAluno";
 
@@ -45,7 +46,9 @@ function inserirAluno(PDO $conexao, string $nomeAluno, float $primeiraNota, floa
 
 
 function lerUmAluno(PDO $conexao, int $id):array {
-    $sql = "SELECT * FROM alunos where id = :id";
+    $sql = "SELECT *,
+    (primeiraNota + segundaNota) / 2 as media
+    FROM alunos WHERE id = :id";
     try {
         $consulta = $conexao -> prepare($sql);
 
