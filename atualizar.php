@@ -5,6 +5,18 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 $dadosDoAluno = lerUmAluno($conexao, $id);
 
+if(isset($_POST['atualizar-dados'])) {
+
+    $nomeAluno = filter_input(INPUT_POST, "nomeAluno", FILTER_SANITIZE_SPECIAL_CHARS);
+
+    $primeiraNota = filter_input(INPUT_POST, "primeiraNota", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+
+    $segundaNota = filter_input(INPUT_POST, "segundaNota", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+
+    atualizarAluno($conexao, $id, $nomeAluno, $primeiraNota, $segundaNota);
+
+    header("location:visualizar.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -61,6 +73,7 @@ $dadosDoAluno = lerUmAluno($conexao, $id);
         </p>
 	    
         <button name="atualizar-dados">Atualizar dados do aluno</button>
+        
 	</form>    
 </div>
     
