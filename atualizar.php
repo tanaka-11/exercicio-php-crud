@@ -34,40 +34,40 @@ if(isset($_POST['atualizar-dados'])) {
 
 <body>
 <div class="containerAtualizar">
-    <h1>Atualizar dados do aluno </h1>
+    <h1 class="text-center">Atualizar dados do aluno </h1>
     		
-    <p>Utilize o formulário abaixo para atualizar os dados do aluno.</p>
+    <h2 class="text-center">Utilize o formulário abaixo para atualizar os dados do aluno.</p>
 
     <form action="#" method="post">
 
         <input type="hidden" name="id" value="<?=$dadosDoAluno['id']?>">    
     
 	    <p>
-            <label for="nome">Nome:</label>
+            <label for="nome">Nome</label>
 
 	        <input value="<?=$dadosDoAluno['nomeAluno']?>" type="text" name="nomeAluno" id="nomeAluno" required>
         </p>
         
         <p>
-            <label for="primeira">Primeira nota:</label>
+            <label for="primeira">Primeira nota</label>
             
 	        <input value="<?=$dadosDoAluno['primeiraNota']?>" name="primeiraNota" type="number" id="primeiraNota" step="0.01" min="0.00" max="10.00" required>
         </p>
 	    
 	    <p>
-            <label for="segunda">Segunda nota:</label>
+            <label for="segunda">Segunda nota</label>
 
 	        <input value="<?=$dadosDoAluno['segundaNota']?>" name="segundaNota" type="number" id="segunda" step="0.01" min="0.00" max="10.00" required>
         </p>
 
         <p>
-            <label for="media">Média:</label>
+            <label for="media">Média</label>
 
             <input value="<?=number_format($dadosDoAluno['media'], 2)?>" name="media" type="number" id="media" step="0.01" min="0.00" max="10.00" readonly disabled>
         </p>
 
         <p>
-            <label for="situacao">Situação:</label>
+            <label for="situacao">Situação</label>
 
 	        <input value="<?=($dadosDoAluno['situacao'])?>" type="text" name="situacao" id="situacao" readonly disabled>
         </p>
@@ -77,9 +77,9 @@ if(isset($_POST['atualizar-dados'])) {
 	</form>    
 </div>
     
-    <footer>
+    <footer class="text-center">
         <p>
-            <a href="visualizar.php">Voltar à lista de alunos</a>
+            <a href="visualizar.php">Voltar</a>
         </p>
     </footer>
 
