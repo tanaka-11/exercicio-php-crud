@@ -1,4 +1,5 @@
 <?php
+require_once "./src/funcoes-utilitarias.php";
 require_once "./src/funcoes-alunos.php";
 $listaDeAlunos = lerAlunos($conexao);
 ?>
@@ -44,7 +45,7 @@ $listaDeAlunos = lerAlunos($conexao);
     </p>
 
     <p>
-        <b>Média : </b><?=$aluno['Média']?>
+        <b>Média : </b><?=number_format($aluno['Média'], 2, ".", ".")?>
     </p>
 
     <p>
