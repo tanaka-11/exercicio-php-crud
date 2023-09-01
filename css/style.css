@@ -24,6 +24,11 @@
 }
 
 
+/* Estilo de texto da situação */
+.situacao-text {
+    font-weight: bold;
+}
+
 html { font-size: 16px;}
 
 body { 

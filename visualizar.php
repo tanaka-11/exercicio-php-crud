@@ -49,17 +49,22 @@ $listaDeAlunos = lerAlunos($conexao);
         <b>Média : </b><?=number_format($aluno['media'], 2)?>
     </p>
 
-    <p class="<?php
-        if ($aluno['situacao'] === 'Aprovado') {
-            echo 'Aprovado';
-        } elseif ($aluno['situacao'] === 'Reprovado') {
-            echo 'Reprovado';
-        } elseif ($aluno['situacao'] ==='Recuperação') {
-            echo 'recuperacao';
-        } ?>">
-            <b>Situação : </b><?= $aluno['situacao'] ?>
-        </p>
+    <!-- PHP para mudança de cores -->
+    <?php
+    $situacaoCores = [
+    'Aprovado' => 'lightgreen',
+    'Reprovado' => 'red',
+    'Recuperação' => 'orange',
+    ];
 
+    $cor = $situacaoCores[$aluno['situacao']] ?? 'white';
+    ?>
+    <!-- Termino PHP de mudança de cor -->
+
+    <p style="color: <?= $cor ?>;">
+        <b>Situação: </b>
+        <?= $aluno['situacao'] ?>
+    </p>
 
     <br>
 

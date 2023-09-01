@@ -51,8 +51,15 @@ function inserirAluno(PDO $conexao, string $nomeAluno, float $primeiraNota, floa
 
 function lerUmAluno(PDO $conexao, int $id):array {
     $sql = "SELECT *,
-    (primeiraNota + segundaNota) / 2 as media
-    FROM alunos WHERE id = :id";
+    (primeiraNota + segundaNota) / 2 as media,
+    CASE
+            WHEN (primeiraNota + segundaNota) / 2 >= 7 THEN 'Aprovado'
+            WHEN (primeiraNota + segundaNota) / 2 >= 5 THEN 'Recuperação'
+            ELSE 'Reprovado'
+    END as situacao
+    FROM alunos
+    WHERE id = :id
+    ORDER BY nomeAluno";
     try {
         $consulta = $conexao -> prepare($sql);
 

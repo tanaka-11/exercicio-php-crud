@@ -5,7 +5,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 $dadosDoAluno = lerUmAluno($conexao, $id);
 
-$listaDeAlunos = lerAlunos($conexao);
+$situacao = lerAlunos($conexao);
 
 if(isset($_POST['deletar'])){
     deletarAluno($conexao, $id);
@@ -71,7 +71,8 @@ if(isset($_POST['deletar'])){
         <p>
             <label for="situacao">Situação:</label>
 
-	        <input type="text" name="situacao" id="situacao" readonly disabled>
+			<input value="<?=$dadosDoAluno['situacao']?>" type="text" name="situacao" id="situacao" readonly disabled>
+		
         </p>
 	    
 	    	

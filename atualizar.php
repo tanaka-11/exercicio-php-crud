@@ -69,7 +69,7 @@ if(isset($_POST['atualizar-dados'])) {
         <p>
             <label for="situacao">Situação:</label>
 
-	        <input value=" <?=($dadosDoAluno['situacao'])?>" type="text" name="situacao" id="situacao" readonly disabled>
+	        <input value="<?=($dadosDoAluno['situacao'])?>" type="text" name="situacao" id="situacao" readonly disabled>
         </p>
 	    
         <button name="atualizar-dados">Atualizar dados do aluno</button>
