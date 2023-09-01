@@ -26,7 +26,7 @@ if(isset($_POST['deletar'])){
 
 </head>
 
-<div class="containerCadastro">
+<div class="containerDeletar">
 	<body>
 
 	<header>	

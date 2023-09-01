@@ -329,3 +329,10 @@ button:hover, button:focus {
 .botaoDeletar:hover {
     background-color: red;
 }
+
+.containerDeletar h1{
+    font-size: 2.2rem;
+    padding: 30px;
+    /* margin: 30px; */
+    color: var(--color-h1-cadastro);
+}
