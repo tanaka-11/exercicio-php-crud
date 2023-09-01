@@ -31,6 +31,7 @@ $listaDeAlunos = lerAlunos($conexao);
 
     <div class="alunos">
 <?php foreach($listaDeAlunos as $aluno) {?>
+    
     <article class="aluno">  
     <p>
         <b>Nome do Aluno : </b><?=$aluno['nomeAluno']?>
@@ -48,9 +49,17 @@ $listaDeAlunos = lerAlunos($conexao);
         <b>Média : </b><?=number_format($aluno['media'], 2)?>
     </p>
 
-    <p>
-        <b>Situação : </b> <?=($aluno['situacao'])?>
-    </p>
+    <p class="<?php
+        if ($aluno['situacao'] === 'Aprovado') {
+            echo 'Aprovado';
+        } elseif ($aluno['situacao'] === 'Reprovado') {
+            echo 'Reprovado';
+        } elseif ($aluno['situacao'] ==='Recuperação') {
+            echo 'recuperacao';
+        } ?>">
+            <b>Situação : </b><?= $aluno['situacao'] ?>
+        </p>
+
 
     <br>
 
