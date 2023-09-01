@@ -20,6 +20,7 @@ function lerAlunos(PDO $conexao): array {
         $consulta = $conexao->prepare($sql);
         $consulta->execute();
         $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+        
     } catch (Exception $erro) {
         die("Falha na conexão do servidor: " . $erro->getMessage());
     }
