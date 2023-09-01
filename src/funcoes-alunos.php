@@ -1,27 +1,31 @@
 <?php
 require_once "conecta.php";
 
-function lerAlunos (PDO $conexao):array {
-    $sql = "SELECT id,
-    nomeAluno,
-    primeiraNota,
-    segundaNota,
-    (primeiraNota + segundaNota) / 2 as media
-    FROM alunos 
-    ORDER BY nomeAluno";
-
+function lerAlunos(PDO $conexao): array {
+    $sql = "SELECT 
+        id,
+        nomeAluno,
+        primeiraNota,
+        segundaNota,
+        (primeiraNota + segundaNota) / 2 as media,
+        CASE
+            WHEN (primeiraNota + segundaNota) / 2 >= 7 THEN 'Aprovado'
+            WHEN (primeiraNota + segundaNota) / 2 >= 5 THEN 'Recuperação'
+            ELSE 'Reprovado'
+        END as situacao
+        FROM alunos
+        ORDER BY nomeAluno";
+    
     try {
-        $consulta = $conexao -> prepare($sql);
-        
-        $consulta -> execute();
-
-        $resultado = $consulta -> fetchAll(PDO::FETCH_ASSOC);
-
-    } catch(Exception $erro) {
-        die("Falha na conexão do servidor: ".$erro->getMessage());
+        $consulta = $conexao->prepare($sql);
+        $consulta->execute();
+        $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    } catch (Exception $erro) {
+        die("Falha na conexão do servidor: " . $erro->getMessage());
     }
     return $resultado;
 }
+
 
 
 

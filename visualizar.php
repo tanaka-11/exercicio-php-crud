@@ -49,7 +49,7 @@ $listaDeAlunos = lerAlunos($conexao);
     </p>
 
     <p>
-        <b>Situação : </b>
+        <b>Situação : </b> <?=($aluno['situacao'])?>
     </p>
 
     <br>
