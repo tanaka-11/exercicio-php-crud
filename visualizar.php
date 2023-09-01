@@ -20,8 +20,12 @@ $listaDeAlunos = lerAlunos($conexao);
 
     <div class="containerVisualizar text-center">
         <h1>Lista de Alunos</h1>
-    
-        <p><a href="inserir.php">Inserir novo aluno</a></p>
+
+        <div class="button-inserir-aluno">
+        <p>
+            <a href="inserir.php">Inserir novo aluno</a>
+        </p>
+        </div>
     </div>
 
     <div class="alunos">
@@ -49,20 +53,20 @@ $listaDeAlunos = lerAlunos($conexao);
 
     <br>
 
-    <p>
+    <section class="edicaoAluno">
         <a class="editarAluno" href="">Editar</a> |
         <a class="excluirAluno" href="">Excluir</a>
-    </p>
+    </section>
 
     </article>  
 <?php } ?>
+</div>
 
-    <footer>
+    <footer class="text-center">
         <p>
             <a href="index.php">Voltar</a>
         </p>
     </footer>    
-</div>
 
 
 </body>

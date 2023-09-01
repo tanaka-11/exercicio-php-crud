@@ -125,46 +125,80 @@ ul li {
 
 .alunos {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
-    width: 70%;
+    width: 60%;
     margin: auto;
 }
 
 .aluno {
     background-color: #0a3599;
     padding: 1.2rem;
-    width: 450px;
-    box-shadow: #000 1px 1px 4px;
+    width: 500px;
+    box-shadow: #000 1px 1px 2px;
     border-radius: 8px;
 }
 
 .aluno b{
-    color: #ffff00;/
+    color: #ffff00;
 }
 
 .aluno p {
     color: white;
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
-.aluno p a {
-    color: white;
+.aluno p:hover {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.edicaoAluno a {
+    color: #ffffff;
     text-decoration: none;
     font-size: 2rem;
     transition: font-size 0.3s ease;
 }
 
+.edicaoAluno a:hover {
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+.aluno p b:hover {
+    color: yellow;
+}
+
 .editarAluno:hover {
-    color: #0089fa;
+    color: #1a98ff;
     font-size: 2.3rem;
 }
 
 .excluirAluno:hover {
-    color: #9c1f1f;
+    color: #b92a2a;
     font-size: 2.3rem;
+}
+
+.button-inserir-aluno{
+    margin: 30px;
+    color: #211fb3;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.button-inserir-aluno p a{
+    transition: font-size 0.3s ease;
+}
+
+.button-inserir-aluno p a:hover{
+    background-color: #0089fa;
+    border-radius: 12px;
+    color: white;
+    font-size: 2.2rem;
 }
 
 /* Página Inserir */
