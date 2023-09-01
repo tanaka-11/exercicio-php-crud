@@ -23,12 +23,6 @@
     text-align: center;
 }
 
-
-/* Estilo de texto da situação */
-.situacao-text {
-    font-weight: bold;
-}
-
 html { font-size: 16px;}
 
 body { 
@@ -63,7 +57,7 @@ footer p a:hover, footer p a:focus {
     margin: 120px auto;
     max-width: 1200px;
     width: 75%;
-    height: 60vh;
+    height: 50vh;
     border-radius: 12px;
     background-color:#0a3599;
     box-shadow: #000 1px 1px 10px;
@@ -329,4 +323,9 @@ button:hover, button:focus {
 
 .containerAtualizar h2 {
     color: var(--color-p-cadastro);
+}
+
+/* Página de exclusão */
+.botaoDeletar:hover {
+    background-color: red;
 }

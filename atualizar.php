@@ -36,7 +36,7 @@ if(isset($_POST['atualizar-dados'])) {
 <div class="containerAtualizar">
     <h1 class="text-center">Atualizar dados do aluno </h1>
     		
-    <h2 class="text-center">Utilize o formulário abaixo para atualizar os dados do aluno.</p>
+    <h2 class="text-center">Utilize o formulário abaixo para atualizar os dados do aluno.</h2>
 
     <form action="#" method="post">
 
