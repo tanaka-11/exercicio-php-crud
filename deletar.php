@@ -5,8 +5,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 $dadosDoAluno = lerUmAluno($conexao, $id);
 
-$situacao = lerAlunos($conexao);
-
 if(isset($_POST['deletar'])){
     deletarAluno($conexao, $id);
     header("location:visualizar.php");
@@ -38,6 +36,7 @@ if(isset($_POST['deletar'])){
 	</header>
 
 	<div class="centralizar">
+<main>		
 	<!-- Começo formulário -->
 		<form class="" action="#" method="post">
         
@@ -80,6 +79,7 @@ if(isset($_POST['deletar'])){
 		
 		</form>
 	</div>
+</main>
 
 	<footer>
     	<p class="text-center">

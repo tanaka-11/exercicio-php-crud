@@ -17,15 +17,6 @@ if(isset($_POST['inserir'])){
 
 
 
-
-
-
-
-
-
-
-
-
 <!-- Começo HTML -->
 <!DOCTYPE html>
 
@@ -50,6 +41,7 @@ if(isset($_POST['inserir'])){
     	<p class="text-center">Utilize o formulário abaixo para cadastrar as nota de um aluno.</p>	
 	</header>
 
+<main>	
 	<div class="centralizar">
 	<!-- Começo formulário -->
 		<form class="" action="#" method="post">
@@ -90,6 +82,7 @@ if(isset($_POST['inserir'])){
 		
 		</form>
 	</div>
+</main>
 
 	<footer>
     	<p class="text-center">

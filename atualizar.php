@@ -26,6 +26,7 @@ if(isset($_POST['atualizar-dados'])) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Atualizar dados do Aluno</title>
 
 <link href="css/style.css" rel="stylesheet">
@@ -34,10 +35,14 @@ if(isset($_POST['atualizar-dados'])) {
 
 <body>
 <div class="containerAtualizar">
-    <h1 class="text-center">Atualizar dados do aluno </h1>
-    		
-    <h2 class="text-center">Utilize o formulário abaixo para atualizar os dados do aluno.</h2>
 
+    <header>
+        <h1 class="text-center">Atualizar dados do aluno </h1>
+    		
+        <h2 class="text-center">Utilize o formulário abaixo para atualizar os dados do aluno.</h2>
+    </header>
+
+<main>
     <form action="#" method="post">
 
         <input type="hidden" name="id" value="<?=$dadosDoAluno['id']?>">    
@@ -76,7 +81,8 @@ if(isset($_POST['atualizar-dados'])) {
         
 	</form>    
 </div>
-    
+</main>
+
     <footer class="text-center">
         <p>
             <a href="visualizar.php">Voltar</a>
