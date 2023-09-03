@@ -35,9 +35,10 @@ if(isset($_POST['deletar'])){
     	<p class="text-center">Tem certeza que quer deletar o aluno abaixo?</p>	
 	</header>
 
-	<div class="centralizar">
-<main>		
-	<!-- Começo formulário -->
+	<main>		
+	
+		<div class="centralizar">
+		<!-- Começo formulário -->
 		<form class="" action="#" method="post">
         
         <input type="hidden" name="id" value="<?=$dadosDoAluno['id']?>">
@@ -78,8 +79,9 @@ if(isset($_POST['deletar'])){
 		<button class="botaoDeletar" type="submit" name="deletar">Deletar Aluno</button>
 		
 		</form>
-	</div>
-</main>
+		</div>
+
+	</main>
 
 	<footer>
     	<p class="text-center">
@@ -89,4 +91,5 @@ if(isset($_POST['deletar'])){
 
 	</body>
 </div>
+
 </html>
