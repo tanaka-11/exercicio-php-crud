@@ -34,7 +34,6 @@ if(isset($_POST['atualizar-dados'])) {
 </head>
 
 <body>
-
 <div class="containerAtualizar">
 
     <header>
@@ -44,11 +43,7 @@ if(isset($_POST['atualizar-dados'])) {
     </header>
 
     <main>
-<<<<<<< Updated upstream
         <form action="#" method="post">
-=======
-    <form action="#" method="post">
->>>>>>> Stashed changes
 
         <input type="hidden" name="id" value="<?=$dadosDoAluno['id']?>">    
     
@@ -67,11 +62,7 @@ if(isset($_POST['atualizar-dados'])) {
 	    <p>
         <label for="segunda">Segunda nota</label>
 
-<<<<<<< Updated upstream
 	    <input value="<?=$dadosDoAluno['segundaNota']?>" name="segundaNota" type="number" id="segundaNota" step="0.01" min="0.00" max="10.00" required>
-=======
-	        <input value="<?=$dadosDoAluno['segundaNota']?>" name="segundaNota" type="number" id="segundaNota" step="0.01" min="0.00" max="10.00" required>
->>>>>>> Stashed changes
         </p>
 
         <p>
@@ -88,14 +79,8 @@ if(isset($_POST['atualizar-dados'])) {
 	    
         <button name="atualizar-dados">Atualizar dados do aluno</button>
         
-<<<<<<< Updated upstream
         </form>    
 </div>
-=======
-	</form>
-
-    </div>
->>>>>>> Stashed changes
     </main>
 
     <footer class="text-center">
@@ -104,32 +89,16 @@ if(isset($_POST['atualizar-dados'])) {
         </p>
     </footer>
 
-<<<<<<< Updated upstream
 <script>
     document.getElementById('primeiraNota').addEventListener('input', atualizarCampos);
-=======
-</div>  
-
-<script>
-    document.getElementById('primeiraNota').addEventListener('input', atualizarCampos);
-
->>>>>>> Stashed changes
     document.getElementById('segundaNota').addEventListener('input', atualizarCampos);
 
     function atualizarCampos() {
         const primeiraNota = parseFloat(document.getElementById('primeiraNota').value);
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         const segundaNota = parseFloat(document.getElementById('segundaNota').value);
 
         if (!isNaN(primeiraNota) && !isNaN(segundaNota)) {
             const media = ((primeiraNota + segundaNota) / 2).toFixed(2);
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             let situacao;
 
             if (media >= 7) {
@@ -141,7 +110,6 @@ if(isset($_POST['atualizar-dados'])) {
             }
 
             document.getElementById('media').value = media;
-<<<<<<< Updated upstream
             document.getElementById('situacao').value = situacao;
         } else {
             document.getElementById('media').value = '';
@@ -151,19 +119,5 @@ if(isset($_POST['atualizar-dados'])) {
 </script>
 
 
-=======
-
-            document.getElementById('situacao').value = situacao;
-        } else {
-            document.getElementById('media').value = '';
-
-            document.getElementById('situacao').value = '';
-        }
-    }
-
-</script>
-
->>>>>>> Stashed changes
 </body>
-
 </html>

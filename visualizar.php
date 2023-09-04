@@ -53,11 +53,7 @@ $listaDeAlunos = lerAlunos($conexao);
     <?php
     $situacaoCores = [
     'Aprovado' => 'lightgreen',
-<<<<<<< Updated upstream
     'Reprovado' => '#f23131',
-=======
-    'Reprovado' => '#f15353',
->>>>>>> Stashed changes
     'Recuperação' => 'orange',
     ];
 
