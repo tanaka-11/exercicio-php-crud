@@ -42,52 +42,82 @@ if(isset($_POST['atualizar-dados'])) {
         <h2 class="text-center">Utilize o formulário abaixo para atualizar os dados do aluno.</h2>
     </header>
 
-<main>
-    <form action="#" method="post">
+    <main>
+        <form action="#" method="post">
 
         <input type="hidden" name="id" value="<?=$dadosDoAluno['id']?>">    
     
 	    <p>
-            <label for="nome">Nome</label>
+        <label for="nome">Nome</label>
 
-	        <input value="<?=$dadosDoAluno['nomeAluno']?>" type="text" name="nomeAluno" id="nomeAluno" required>
+	    <input value="<?=$dadosDoAluno['nomeAluno']?>" type="text" name="nomeAluno" id="nomeAluno" required>
         </p>
         
         <p>
-            <label for="primeira">Primeira nota</label>
+        <label for="primeira">Primeira nota</label>
             
-	        <input value="<?=$dadosDoAluno['primeiraNota']?>" name="primeiraNota" type="number" id="primeiraNota" step="0.01" min="0.00" max="10.00" required>
+	    <input value="<?=$dadosDoAluno['primeiraNota']?>" name="primeiraNota" type="number" id="primeiraNota" step="0.01" min="0.00" max="10.00" required>
         </p>
 	    
 	    <p>
-            <label for="segunda">Segunda nota</label>
+        <label for="segunda">Segunda nota</label>
 
-	        <input value="<?=$dadosDoAluno['segundaNota']?>" name="segundaNota" type="number" id="segunda" step="0.01" min="0.00" max="10.00" required>
+	    <input value="<?=$dadosDoAluno['segundaNota']?>" name="segundaNota" type="number" id="segundaNota" step="0.01" min="0.00" max="10.00" required>
         </p>
 
         <p>
-            <label for="media">Média</label>
+        <label for="media">Média</label>
 
-            <input value="<?=number_format($dadosDoAluno['media'], 2)?>" name="media" type="number" id="media" step="0.01" min="0.00" max="10.00" readonly disabled>
+        <input value="<?=number_format($dadosDoAluno['media'], 2)?>" name="media" type="number" id="media" step="0.01" min="0.00" max="10.00" readonly disabled>
         </p>
 
         <p>
-            <label for="situacao">Situação</label>
+        <label for="situacao">Situação</label>
 
-	        <input value="<?=($dadosDoAluno['situacao'])?>" type="text" name="situacao" id="situacao" readonly disabled>
+	    <input value="<?=($dadosDoAluno['situacao'])?>" type="text" name="situacao" id="situacao" readonly disabled>
         </p>
 	    
         <button name="atualizar-dados">Atualizar dados do aluno</button>
         
-	</form>    
+        </form>    
 </div>
-</main>
+    </main>
 
     <footer class="text-center">
         <p>
             <a href="visualizar.php">Voltar</a>
         </p>
     </footer>
+
+<script>
+    document.getElementById('primeiraNota').addEventListener('input', atualizarCampos);
+    document.getElementById('segundaNota').addEventListener('input', atualizarCampos);
+
+    function atualizarCampos() {
+        const primeiraNota = parseFloat(document.getElementById('primeiraNota').value);
+        const segundaNota = parseFloat(document.getElementById('segundaNota').value);
+
+        if (!isNaN(primeiraNota) && !isNaN(segundaNota)) {
+            const media = ((primeiraNota + segundaNota) / 2).toFixed(2);
+            let situacao;
+
+            if (media >= 7) {
+                situacao = 'Aprovado';
+            } else if (media >= 5) {
+                situacao = 'Recuperação';
+            } else {
+                situacao = 'Reprovado';
+            }
+
+            document.getElementById('media').value = media;
+            document.getElementById('situacao').value = situacao;
+        } else {
+            document.getElementById('media').value = '';
+            document.getElementById('situacao').value = '';
+        }
+    }
+</script>
+
 
 </body>
 </html>

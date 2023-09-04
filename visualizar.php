@@ -53,7 +53,7 @@ $listaDeAlunos = lerAlunos($conexao);
     <?php
     $situacaoCores = [
     'Aprovado' => 'lightgreen',
-    'Reprovado' => 'red',
+    'Reprovado' => '#f23131',
     'Recuperação' => 'orange',
     ];
 
