@@ -85,7 +85,7 @@ if(isset($_POST['deletar'])){
 
 	<footer>
     	<p class="text-center">
-			<a href="index.php">Voltar</a>
+			<a href="visualizar.php">Voltar</a>
 		</p>
 	</footer>
 
