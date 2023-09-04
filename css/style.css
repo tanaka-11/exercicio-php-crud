@@ -57,7 +57,11 @@ footer p a:hover, footer p a:focus {
     margin: 120px auto;
     max-width: 1200px;
     width: 75%;
+<<<<<<< Updated upstream
     height: 55vh;
+=======
+    height: 60vh;
+>>>>>>> Stashed changes
     border-radius: 12px;
     background-color:#0a3599;
     box-shadow: #000 1px 1px 10px;
@@ -65,8 +69,13 @@ footer p a:hover, footer p a:focus {
 
 .containerIndex h1{ 
     color: #fff;
+<<<<<<< Updated upstream
     font-size: 2.3rem;
     margin-top: 30px;
+=======
+    font-size: 2.2rem;
+    margin-top: 20px;
+>>>>>>> Stashed changes
 }
 
 .containerIndex h2 {
@@ -82,8 +91,12 @@ ul {
 }
 
 ul li {
+<<<<<<< Updated upstream
     padding: 30px;
     font-size: 2rem;
+=======
+    padding: 20px;
+>>>>>>> Stashed changes
 }
 
 .button-visualizar {
@@ -92,14 +105,18 @@ ul li {
 
 .button-visualizar a{
     color: #ffffff;
+<<<<<<< Updated upstream
     font-size: 1.9rem;
+=======
+    font-size: 1.6rem;
+>>>>>>> Stashed changes
 }
 
 .button-visualizar a:hover, .button-visualizar a:focus{
     background-color: #ccdf26; 
-    color: #000000;
+    color: #0e133f;
     border-radius: 8px;
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
 }
 
@@ -107,6 +124,10 @@ ul li {
     text-decoration: none;
     transition: font-size 0.3s ease;
     font-weight: 700;
+<<<<<<< Updated upstream
+=======
+    font-size: 1.6rem;
+>>>>>>> Stashed changes
 }
 
 /* Página Visualizar */
@@ -120,7 +141,6 @@ ul li {
 
 .containerVisualizar p a{
     text-decoration: none;
-    /* padding: 10px; */
     font-size: 1.8rem;
 }
 
@@ -326,7 +346,7 @@ button:hover, button:focus {
 
 /* Página de exclusão */
 .botaoDeletar:hover {
-    background-color: red;
+    background-color: #ff0000;
 }
 
 .containerDeletar h1{
