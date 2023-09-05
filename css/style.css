@@ -386,25 +386,28 @@ button:hover, button:focus {
 .resultadoBusca h2 {
     margin: 5px;
     color: #fff;
-    
+    text-shadow: #000 1px 2px 1px;
 }
 
 .resultadoBusca p b {
     font-weight: bold;
     text-transform: uppercase;
-    color: #000;
+    color: #5c8eeb;
     /* text-shadow: #fff 1px 1px 1px; */
 }
 
 .resultadoBusca p {
     color: #fff;
-    padding: 10px;
+    padding: 5px;
     font-size: 1.2rem;
-    margin: 10px;
-    /* text-shadow: #000 1px 1px 2px; */
+    margin: 5px;
+    text-shadow: #000 1px 1px 2px;
 }
 
 .resultadoBusca p:hover {
     font-size: 1.3rem;
     text-transform: uppercase;
+    color: #f1f5ff;
+    font-weight: bold;
+    text-shadow: #000 2px 2px 2px;
 }

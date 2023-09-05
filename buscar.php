@@ -53,15 +53,37 @@ if (isset($_POST['buscar'])) {
 
             <?php foreach ($resultado as $aluno) { ?>
 
-				<p><b>Nome:</b> <?= $aluno['nomeAluno'] ?> </p>
+				<p>
+					<b>Nome - </b><?= $aluno['nomeAluno']?>
+				</p>
 
-				<p><b>1ª Nota:</b> <?= $aluno['primeiraNota'] ?> </p>
+				<p>
+					<b>1ª Nota - </b> <?= $aluno['primeiraNota'] ?> 
+				</p>
 
-				<p><b>2ª Nota:</b> <?= $aluno['segundaNota'] ?> </p>
+				<p>
+					<b>2ª Nota - </b> <?= $aluno['segundaNota'] ?> 
+				</p>
 
-				<p><b>Média:</b> <?= number_format($aluno['media'], 2) ?> </p>
+				<p>
+					<b>Média - </b> <?= number_format($aluno['media'], 2) ?> 
+				</p>
+			
+			<!-- PHP mudança de cor -->
+				<?php
+    				$situacaoCores = [
+    				'Aprovado' => 'lightgreen',
+    				'Reprovado' => '#f23131',
+    				'Recuperação' => 'orange',
+    			];
 
-				<p><b>Situação:</b> <?= $aluno['situacao'] ?> </p>
+    			$cor = $situacaoCores[$aluno['situacao']] ?? 'white';
+    			?>
+    		<!-- Termino PHP de mudança de cor -->
+
+    			<p style="color: <?=$cor?>;">
+        			<b>Situação - </b><?=$aluno['situacao']?>
+    			</p>
 			<?php } ?>
 			
 			<button type="submit">OK</button>
