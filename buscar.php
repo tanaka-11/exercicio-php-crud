@@ -51,9 +51,25 @@ if (isset($_POST['buscar'])) {
 			<h2 class="text-center">Resultados da Busca</h2>
 
             <?php foreach ($resultado as $aluno) { ?>
+				
+				<!-- PHP mudança de cor -->
+				<?php
+					$situacaoCores = [
+					'Aprovado' => 'lightgreen',
+					'Reprovado' => '#f23131',
+					'Recuperação' => 'orange',
+				];
 
+				$cor = $situacaoCores[$aluno['situacao']] ?? 'white';
+				?>
+				<!-- Termino PHP de mudança de cor -->
+				
 				<p>
 					<b>Nome - </b><?= $aluno['nomeAluno']?>
+				</p>
+
+				<p style="color: <?=$cor?>;">
+					<b>Situação - </b><?=$aluno['situacao']?>
 				</p>
 
 				<p>
@@ -68,21 +84,6 @@ if (isset($_POST['buscar'])) {
 					<b>Média - </b> <?= number_format($aluno['media'], 2) ?> 
 				</p>
 			
-			<!-- PHP mudança de cor -->
-				<?php
-    				$situacaoCores = [
-    				'Aprovado' => 'lightgreen',
-    				'Reprovado' => '#f23131',
-    				'Recuperação' => 'orange',
-    			];
-
-    			$cor = $situacaoCores[$aluno['situacao']] ?? 'white';
-    			?>
-    		<!-- Termino PHP de mudança de cor -->
-
-    			<p style="color: <?=$cor?>;">
-        			<b>Situação - </b><?=$aluno['situacao']?>
-    			</p>
 			<?php } ?>
 			
 			<button id="botao" onclick="esconderMensagem()">OK</button>

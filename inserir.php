@@ -86,7 +86,7 @@ if(isset($_POST['inserir'])){
 
 	<footer>
     	<p class="text-center">
-			<a href="visualizar.php">Voltar</a>
+			<a href="index.php">Voltar</a>
 		</p>
 	</footer>
 
