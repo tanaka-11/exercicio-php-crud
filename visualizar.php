@@ -26,6 +26,10 @@ $listaDeAlunos = lerAlunos($conexao);
         <p>
             <a href="inserir.php">Inserir novo aluno</a>
         </p>
+
+        <p>
+            <a href="buscar.php">Buscar dados do Aluno</a>
+        </p>
         </div>
     </div>
 
@@ -79,7 +83,7 @@ $listaDeAlunos = lerAlunos($conexao);
     </article>  
 <?php } ?>
 </div>
-
+    
     <footer class="text-center">
         <p>
             <a href="index.php">Voltar</a>

@@ -116,3 +116,32 @@ function deletarAluno(PDO $conexao, int $id):void {
         die("Erro ao deletar dados do aluno. Tente Novamente".$erro->getMessage());
     }
 }
+
+function buscarAluno(PDO $conexao, string $nomeAluno):array {
+    $sql = "SELECT * ,
+    (primeiraNota + segundaNota) / 2 as media,
+    CASE
+        WHEN (primeiraNota + segundaNota) / 2 >= 7 THEN 'Aprovado'
+        WHEN (primeiraNota + segundaNota) / 2 >= 5 THEN 'Recuperação'
+        ELSE 'Reprovado'
+    END as situacao
+    FROM alunos WHERE nomeAluno LIKE :nome";
+  
+    try {
+        $consulta = $conexao->prepare($sql);
+    
+        // Utilize bindParam para vincular o valor da variável na consulta
+        $consulta->bindParam(':nome', $nomeAlunoParam, PDO::PARAM_STR);
+        
+        // Adicione o caractere % antes e depois do nome para buscar correspondências parciais
+        $nomeAlunoParam = "%$nomeAluno%";
+    
+        $consulta->execute();
+    
+        $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+    } catch (PDOException $erro) {
+        die("Erro ao buscar dados do aluno. Tente Novamente: " . $erro->getMessage());
+    }
+    return $resultado;
+}
