@@ -345,3 +345,8 @@ button:hover, button:focus {
     margin: 30px;
     width: 90%;
 }
+
+/* Página de Busca */
+.resultadoBusca h2 {
+   color: var(--color-p-cadastro);
+}

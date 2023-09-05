@@ -44,26 +44,27 @@ if (isset($_POST['buscar'])) {
 
         <?php if (!empty($resultado)) { ?>
                 
-			<h2>Resultados da Busca:</h2>
+			<h2 class="text-center">Resultados da Busca:</h2>
 
             <?php foreach ($resultado as $aluno) { ?>
 
-				<p>Nome do Aluno: <?= $aluno['nomeAluno'] ?> </p>
+				<div class="resultadoBusca text-center">
+				<p><b>Nome do Aluno:</b> <?= $aluno['nomeAluno'] ?> </p>
 
-				<p>1ª Nota: <?= $aluno['primeiraNota'] ?> </p>
+				<p><b>1ª Nota:</b> <?= $aluno['primeiraNota'] ?> </p>
 
-				<p>2ª Nota: <?= $aluno['segundaNota'] ?> </p>
+				<p><b>2ª Nota:</b> <?= $aluno['segundaNota'] ?> </p>
 
-				<p>Média: <?= number_format($aluno['media'], 2) ?> </p>
+				<p><b>Média:</b> <?= number_format($aluno['media'], 2) ?> </p>
 
-				<p>Situação: <?= $aluno['situacao'] ?> </p>
-
+				<p><b>Situação:</b> <?= $aluno['situacao'] ?> </p>
+				</div>
             <?php } ?>
 
         <?php } elseif (isset($_POST['buscar'])) { ?>
             
 			<p>Nenhum aluno encontrado com o nome "<?= $nomeAluno ?>".</p>
-			
+
         <?php } ?>
 
         </main>
