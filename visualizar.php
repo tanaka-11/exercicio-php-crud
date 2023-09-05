@@ -82,11 +82,7 @@ $listaDeAlunos = lerAlunos($conexao);
     </div>
 
     
-    <div class="button-inserir-aluno text-center  edicaoAluno">
-        <p>
-            <a href="inserir.php">Inserir novo aluno</a>
-        </p>    
-    </div>
+    
 
     <footer class="text-center">
         <p>

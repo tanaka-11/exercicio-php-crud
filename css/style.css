@@ -366,12 +366,17 @@ button:hover, button:focus {
     font-weight: bold;
 }
 
-.containerBuscar h1 {
+.headerBusca h1 {
     margin: 30px;
     text-shadow: #8981b9 2px 3px 1px;
     font-size: 2.2rem;
     font-weight: bold;
     color: var(--color-h1-cadastro);
+}
+
+.containerBuscar {
+    width: 60%;
+    margin: auto;
 }
 
 .resultadoBusca {
