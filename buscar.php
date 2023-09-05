@@ -27,7 +27,7 @@ if (isset($_POST['buscar'])) {
 <body>
 <div class="containerBuscar">
 
-    <header class="text-center">
+    <header class="text-center headerBusca">
             <h1>Sistema de Busca de Alunos</h1>
             <p>Digite o nome do aluno para obter informações</p>
     </header>
@@ -46,14 +46,14 @@ if (isset($_POST['buscar'])) {
 
             </div>
 
+			<div class="resultadoBusca">
         <?php if (!empty($resultado)) { ?>
                 
-			<h2 class="text-center">Resultados da Busca:</h2>
+			<h2 class="text-center">Resultados da Busca</h2>
 
-			<div class="resultadoBusca text-center">
             <?php foreach ($resultado as $aluno) { ?>
 
-				<p><b>Nome do Aluno:</b> <?= $aluno['nomeAluno'] ?> </p>
+				<p><b>Nome:</b> <?= $aluno['nomeAluno'] ?> </p>
 
 				<p><b>1ª Nota:</b> <?= $aluno['primeiraNota'] ?> </p>
 
@@ -63,12 +63,13 @@ if (isset($_POST['buscar'])) {
 
 				<p><b>Situação:</b> <?= $aluno['situacao'] ?> </p>
 			<?php } ?>
-			</div>
+			
+			<button type="submit">OK</button>
 
-        <?php } elseif (isset($_POST['buscar'])) { ?>
-			<p>Nenhum aluno encontrado com o nome "<?= $nomeAluno ?>".</p>
+		<?php } elseif (isset($_POST['buscar'])) { ?>
+				<p>Nenhum aluno encontrado com o nome "<?= $nomeAluno ?>".</p>
         <?php } ?>
-
+			</div>		
     </main>
 
         <footer>

@@ -7,7 +7,7 @@
 :root {
     --color-h1-cadastro: #09136e;
     --color-container-cadastro: #626e8b ;
-    --color-p-cadastro: #6845e7;;
+    --color-p-cadastro: #338afc;
     --color-background-cadastro: #b9c3dd;
 }
 
@@ -297,15 +297,16 @@ button:hover, button:focus {
 .containerCadastro h1 {
     font-size: 2.2rem;
     margin: 20px;
+    text-shadow: #8981b9 2px 3px 1px;
     color: var(--color-h1-cadastro);
-    font-weight: 900;
+    font-weight: bold;
 }
 
 .containerCadastro p {
-    font-size: 1.4rem;
     color: var(--color-p-cadastro);
-    font-weight: 800;
-    margin: 10px;
+    font-size: 1.6rem;
+    text-shadow: #000000 1px 1px 2px;
+    font-weight: bold;
 }
 
 /* Página de Atualização */
@@ -315,13 +316,17 @@ button:hover, button:focus {
 
 .containerAtualizar h1 {
     font-size: 2.2rem;
-    padding: 30px;
-    /* margin: 30px; */
+    padding: 20px;
+    margin: 20px;
+    text-shadow: #8981b9 2px 3px 1px;
     color: var(--color-h1-cadastro);
 }
 
 .containerAtualizar h2 {
     color: var(--color-p-cadastro);
+    font-size: 1.6rem;
+    text-shadow: #000000 1px 1px 2px;
+    font-weight: bold;
 }
 
 /* Página de exclusão */
@@ -331,13 +336,16 @@ button:hover, button:focus {
 
 .containerDeletar h1{
     font-size: 2.2rem;
-    padding: 30px;
-    margin: 30px;
+    padding: 20px;
+    margin: 20px;
+    text-shadow: #8981b9 2px 3px 1px;
     color: var(--color-h1-cadastro);
 }
 
 .containerDeletar p {
     font-size: 1.6rem;
+    text-shadow: #000000 1px 1px 2px;
+    font-weight: bold;
     color: var(--color-p-cadastro);
 }
 
@@ -347,19 +355,56 @@ button:hover, button:focus {
 }
 
 /* Página de Busca */
+.headerBusca {
+    margin: 20px;
+}
+
+.headerBusca p {
+    color: var(--color-p-cadastro);
+    font-size: 1.6rem;
+    text-shadow: #000000 1px 1px 2px;
+    font-weight: bold;
+}
+
 .containerBuscar h1 {
-    font-size: 2.2rem;
-    padding: 30px;
     margin: 30px;
+    text-shadow: #8981b9 2px 3px 1px;
+    font-size: 2.2rem;
+    font-weight: bold;
     color: var(--color-h1-cadastro);
 }
 
-.containerBuscar p {
-    font-size: 1.6rem;
-    color: var(--color-p-cadastro);
+.resultadoBusca {
+   background-color: var(--color-container-cadastro);
+   border-radius: 8px;
+   width: 60%;
+   padding: 10px;
+   margin: 20px auto;
+   transition: ease 0.3s font-size;
 }
 
-.containerBuscar {
-    margin: 30px;
-    width: 90%;
+.resultadoBusca h2 {
+    margin: 5px;
+    color: #fff;
+    
+}
+
+.resultadoBusca p b {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    /* text-shadow: #fff 1px 1px 1px; */
+}
+
+.resultadoBusca p {
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin: 10px;
+    /* text-shadow: #000 1px 1px 2px; */
+}
+
+.resultadoBusca p:hover {
+    font-size: 1.3rem;
+    text-transform: uppercase;
 }
