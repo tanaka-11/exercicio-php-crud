@@ -46,9 +46,8 @@ if (isset($_POST['buscar'])) {
 
             </div>
 
-			<div class="resultadoBusca">
-        <?php if (!empty($resultado)) { ?>
-                
+		<?php if (!empty($resultado)) { ?>
+		<div id="mensagem" class="resultadoBusca">    
 			<h2 class="text-center">Resultados da Busca</h2>
 
             <?php foreach ($resultado as $aluno) { ?>
@@ -86,12 +85,18 @@ if (isset($_POST['buscar'])) {
     			</p>
 			<?php } ?>
 			
-			<button type="submit">OK</button>
+			<button id="botao" onclick="esconderMensagem()">OK</button>
+		</div>		
 
 		<?php } elseif (isset($_POST['buscar'])) { ?>
-				<p>Nenhum aluno encontrado com o nome "<?= $nomeAluno ?>".</p>
-        <?php } ?>
-			</div>		
+			<div id="mensagem" class="resultadoBusca">  
+				<p class="text-center">Nenhum aluno encontrado com o nome
+					<b><?=$nomeAluno?></b>
+				</p>
+
+				<button id="botao" onclick="esconderMensagem()">OK</button>
+			</div>
+        	<?php } ?>
     </main>
 
         <footer>
@@ -100,6 +105,8 @@ if (isset($_POST['buscar'])) {
             </p>
         </footer>
 </div>
+
+<script src="./js/esconder-mensagem.js"></script>
 
 </body>
 </html>
