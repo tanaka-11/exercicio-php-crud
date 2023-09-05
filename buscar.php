@@ -25,20 +25,24 @@ if (isset($_POST['buscar'])) {
 </head>
 
 <body>
-    <div class="containerBuscar">
-        <header>
-            <h1 class="text-center">Sistema de Busca de Alunos</h1>
-            <p class="text-center">Digite o nome do aluno para obter informações</p>
-        </header>
-        <main>
+<div class="containerBuscar">
+
+    <header class="text-center">
+            <h1>Sistema de Busca de Alunos</h1>
+            <p>Digite o nome do aluno para obter informações</p>
+    </header>
+
+    <main>
             <div class="centralizar">
 
-			<form class="" action="buscar.php" method="post">
-    		<label for="nomeAluno">Buscar Aluno por Nome:</label>
+				<form class="" action="buscar.php" method="post">
 
-    		<input type="text" id="nomeAluno" name="nomeAluno" required>
-    		<button type="submit" name="buscar">Buscar</button>
-			</form>
+    				<label for="nomeAluno">Buscar Aluno por Nome:</label>
+
+    				<input type="text" id="nomeAluno" name="nomeAluno" required>
+
+    				<button type="submit" name="buscar">Buscar</button>
+				</form>
 
             </div>
 
@@ -46,9 +50,9 @@ if (isset($_POST['buscar'])) {
                 
 			<h2 class="text-center">Resultados da Busca:</h2>
 
+			<div class="resultadoBusca text-center">
             <?php foreach ($resultado as $aluno) { ?>
 
-				<div class="resultadoBusca text-center">
 				<p><b>Nome do Aluno:</b> <?= $aluno['nomeAluno'] ?> </p>
 
 				<p><b>1ª Nota:</b> <?= $aluno['primeiraNota'] ?> </p>
@@ -58,21 +62,21 @@ if (isset($_POST['buscar'])) {
 				<p><b>Média:</b> <?= number_format($aluno['media'], 2) ?> </p>
 
 				<p><b>Situação:</b> <?= $aluno['situacao'] ?> </p>
-				</div>
-            <?php } ?>
+			<?php } ?>
+			</div>
 
         <?php } elseif (isset($_POST['buscar'])) { ?>
-            
 			<p>Nenhum aluno encontrado com o nome "<?= $nomeAluno ?>".</p>
-
         <?php } ?>
 
-        </main>
+    </main>
+
         <footer>
             <p class="text-center">
                 <a href="visualizar.php">Voltar</a>
             </p>
         </footer>
-    </div>
+</div>
+
 </body>
 </html>

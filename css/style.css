@@ -347,7 +347,19 @@ button:hover, button:focus {
 }
 
 /* Página de Busca */
+.containerBuscar h1 {
+    font-size: 2.2rem;
+    padding: 30px;
+    margin: 30px;
+    color: var(--color-h1-cadastro);
+}
+
+.containerBuscar p {
+    font-size: 1.6rem;
+    color: var(--color-p-cadastro);
+}
 
 .containerBuscar {
-    
+    margin: 30px;
+    width: 90%;
 }
