@@ -347,6 +347,7 @@ button:hover, button:focus {
 }
 
 /* Página de Busca */
-.resultadoBusca h2 {
-   color: var(--color-p-cadastro);
+
+.containerBuscar {
+    
 }

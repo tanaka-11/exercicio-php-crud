@@ -19,24 +19,21 @@ $listaDeAlunos = lerAlunos($conexao);
 
 <body>
 
-    <div class="containerVisualizar text-center">
+<div class="containerVisualizar text-center">
         <h1>Lista de Alunos</h1>
 
-        <div class="button-inserir-aluno">
-        <p>
-            <a href="inserir.php">Inserir novo aluno</a>
-        </p>
-
-        <p>
-            <a href="buscar.php">Buscar dados do Aluno</a>
-        </p>
+        <div class="edicaoAluno button-inserir-aluno">    
+            <p>
+                <a href="buscar.php">Buscar Aluno</a>
+            </p>
         </div>
-    </div>
+</div>
 
     <div class="alunos">
 <?php foreach($listaDeAlunos as $aluno) {?>
     
     <article class="aluno">  
+    
     <p>
         <b>Nome do Aluno : </b><?=$aluno['nomeAluno']?>
     </p>
@@ -77,19 +74,27 @@ $listaDeAlunos = lerAlunos($conexao);
         <a class="editarAluno" href="atualizar.php?id=<?=$aluno['id']?>"> Editar </a> |
 
         <a class="excluir excluirAluno" href="deletar.php?id=<?=$aluno['id']?>"> Excluir</a>
-
+        
     </section>
-
+    
     </article>  
 <?php } ?>
-</div>
+    </div>
+
     
+    <div class="button-inserir-aluno text-center  edicaoAluno">
+        <p>
+            <a href="inserir.php">Inserir novo aluno</a>
+        </p>    
+    </div>
+
     <footer class="text-center">
         <p>
             <a href="index.php">Voltar</a>
         </p>
     </footer>    
-
+    
     <script src="./js/confirma-exclusao.js"></script>
+
 </body>
 </html>
