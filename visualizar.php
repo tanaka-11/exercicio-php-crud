@@ -19,6 +19,7 @@ $listaDeAlunos = lerAlunos($conexao);
 
 <body>
 
+<header>
 <div class="containerVisualizar text-center">
         <h1>Lista de Alunos</h1>
 
@@ -28,7 +29,9 @@ $listaDeAlunos = lerAlunos($conexao);
             </p>
         </div>
 </div>
+</header>
 
+<main>
     <div class="alunos">
 <?php foreach($listaDeAlunos as $aluno) {?>
     
@@ -80,7 +83,7 @@ $listaDeAlunos = lerAlunos($conexao);
     </article>  
 <?php } ?>
     </div>
-
+</main>
     
     
 

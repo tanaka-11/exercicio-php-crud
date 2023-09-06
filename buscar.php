@@ -1,8 +1,6 @@
 <?php
 require_once "./src/funcoes-alunos.php";
-
 $listaDeAlunos = lerAlunos($conexao);
-$resultado = []; // Inicialize a variável $resultado como um array vazio
 
 if (isset($_POST['buscar'])) {
     $nomeAluno = filter_input(INPUT_POST, "nomeAluno", FILTER_SANITIZE_SPECIAL_CHARS);
