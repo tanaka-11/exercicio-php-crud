@@ -91,14 +91,17 @@ if(isset($_POST['atualizar-dados'])) {
 
 <script>
     document.getElementById('primeiraNota').addEventListener('input', atualizarCampos);
+
     document.getElementById('segundaNota').addEventListener('input', atualizarCampos);
 
     function atualizarCampos() {
         const primeiraNota = parseFloat(document.getElementById('primeiraNota').value);
+
         const segundaNota = parseFloat(document.getElementById('segundaNota').value);
 
         if (!isNaN(primeiraNota) && !isNaN(segundaNota)) {
             const media = ((primeiraNota + segundaNota) / 2).toFixed(2);
+
             let situacao;
 
             if (media >= 7) {
@@ -110,9 +113,11 @@ if(isset($_POST['atualizar-dados'])) {
             }
 
             document.getElementById('media').value = media;
+
             document.getElementById('situacao').value = situacao;
         } else {
             document.getElementById('media').value = '';
+            
             document.getElementById('situacao').value = '';
         }
     }
