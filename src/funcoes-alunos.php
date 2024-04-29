@@ -27,9 +27,6 @@ function lerAlunos(PDO $conexao): array {
     return $resultado;
 }
 
-
-
-
 function inserirAluno(PDO $conexao, string $nomeAluno, float $primeiraNota, float $segundaNota):void {
     $sql = "INSERT INTO alunos(nomeAluno, primeiraNota, segundaNota) VALUES (:nomeAluno, :primeiraNota, :segundaNota)";
     try {
